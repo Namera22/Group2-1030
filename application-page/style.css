@@ -28,3 +28,18 @@ header video {
     object-fit: cover;
     display: block;
 }
+
+legend {
+    text-align: center;
+}
+
+.form-elements {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin-bottom: 3px;
+    height: 40px;
+    border: 4px inset purple;
+    border-radius: 14px;
+    padding: 0%;
+}
