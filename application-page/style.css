@@ -66,8 +66,21 @@ legend {
 
 .form-elements {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     overflow-x: auto;
     margin-bottom: 3px;
+    height: 40px;
+
+}
+
+.form-label {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-input {
+    width: 250px;
     height: 40px;
 }
