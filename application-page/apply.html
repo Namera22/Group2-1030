@@ -6,19 +6,22 @@
         <meta name="description" content="A page where a user can submit an application to join a smart city infrastructure consultancy">
         <meta name="keywords" content="apply, application, job, recruitment, form, smart city, consultancy">
         <meta name="author" content="James Heneghan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./style.css" rel="stylesheet">
         <title>Smart City infrastructure consultancy</title>
     </head>
     <body>
+
+        <!-- youtube video was used, the link: https://www.youtube.com/watch?v=e-8RIntUcUg-->
        <header class="hero">
             <video autoplay loop muted plays-inline class="video">
                 <source src="./images/Credit-to-sony-background-video.mp4" type="video/mp4">
             </video>
             <h1 class="overlay-text">JOIN THE TEAM</h1>
-            <p class="info">Estimated time: 5 to 8 minutes • Fields marked * are required</p>
+            <p class="info">Estimated time to apply: 5 to 8 minutes • Fields marked * are required</p>
         </header>
         <form action="https://swinburne.instructure.com/courses/71841/assignments/formtest.php." method="post">
-            <section class="form-section"></section>
+            <section class="form-section">
                 <div class="section-heading">
                     <span class="section-number">1</span>
                     <div>
@@ -26,35 +29,89 @@
                         <p>What are the details of the job you are applying for?</p>
                     </div>
                 </div>
-                    <div>
-                        <h2>Job Reference number</h2>
-                    </div>
+
+                <div class="form-grid two-column">
                     <div class="form-elements">
-                        <label for="job-reference" class="form-label">Job Reference</label>
+                        <label for="job-reference">Job Reference <span class="required">*</span></label>
                         <input type="text" name="job-reference" maxlength="5" 
-                        size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Job Reference Number" style="text-align: center;" required class="form-input">
+                        size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Job Reference Number" required>
                     </div>
-            <section class="form-section"></section>
+
+                    <div class="form-elements">
+                        <label for="job-reference">Job Description</label>
+                        <input type="text" name="job-description" size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Details of the role">
+                    </div>
+                </div>
+            </section>
+            <section class="form-section">
                 <div class="section-heading">
                     <span class="section-number">2</span>
                     <div>
                         <h2>Personal Details</h2>
                         <p>Tell us who you are!</p>
                     </div>
+                </div>
+
+                <div class="form-grid two-column">
                     <div class="form-elements">
-                        <label for="first-name" class="form-label">First Name</label>
-                        <input type="text" name="first-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="First Name" required size="30" class="form-input">
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input type="text" name="first-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="First Name" required size="30">
                     </div>
             
                     <div class="form-elements">
-                        <label for="last-name" class="form-label">Last Name</label>
-                        <input type="text" name="last-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="Last Name" required size="30" class="form-input">
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" name="last-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="Last Name" required size="30">
                     </div>
 
-                    <div>
-
+                    <div class="form-elements">
+                        <label for="dob">Date Of Birth <span class="required">*</span></label>
+                        <input type="date" name="dob" id="dob" required>
                     </div>
+
+                    <div class="form-elements">
+                        <label for="gender">Your Gender <span class="required">*</span></label>
+                        <p>
+                            <input type="radio" name="gender" id="male" required>
+                            <label>Male</label>
+
+                            <input type="radio" name="gender" id="Female" required>
+                            <label>Female</label>
+
+                            <input type="radio" name="gender" id="na" required>
+                            <label>Prefer Not Say</label>
+                        </p>
+                    </div>
+
+                    <div class="form-elements">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="you@example.com" required size="30">
+                    </div>
+
+                    <div class="form-elements">
+                        <label for="phone">Contact Number <span class="required">*</span></label>
+                        <input type="text" id="phone" name="phone" placeholder="0123-456-789" pattern="^[0-9]{10}" maxlength="10">
+                    </div>
+
+                    
+                </div>
             </section>
+            <section class="form-section">
+                <div class="section-heading">
+                    <span class="section-number">3</span>
+                    <div>
+                        <h2>Address</h2>
+                        <p>Let us know where you are from</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </div>
         </form>
     </body>
 </html>
