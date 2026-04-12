@@ -29,6 +29,11 @@ body {
     height: 100vh;
 }
 
+section {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
 
 header {
     width: 100%;
@@ -133,4 +138,20 @@ label {
 
 .required {
     color: red;
+}
+
+/* this stops form elements from scrolling within their grid*/
+/* it works by */
+html, body {
+  overflow-y: auto;
+}
+
+.form-grid,
+.form-grid > * {
+  overflow: visible;
+}
+
+#otherskills {
+    width: 500px;
+    height: 400px;
 }

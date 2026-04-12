@@ -22,98 +22,219 @@
             <p class="info">Estimated time to apply: 5 to 8 minutes • Fields marked * are required</p>
             </div>
         </header>
-        <form action="https://swinburne.instructure.com/courses/71841/assignments/formtest.php." method="post">
-            <section class="form-section">
-                <div class="section-heading">
-                    <span class="section-number">1</span>
-                    <div>
-                        <h2>Job Details</h2>
-                        <p>What are the details of the job you are applying for?</p>
-                    </div>
-                </div>
 
-                <div class="form-grid two-column">
-                    <div class="form-elements">
-                        <label for="job-reference">Job Reference <span class="required">*</span></label>
-                        <input type="text" name="job-reference" maxlength="5" 
-                        size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Job Reference Number" required>
-                    </div>
+        <main class="page-wrap">
+            <aside class="progress-card">
+            <h2>Application Sections</h2>
+            <ol>
+                <li>Job Details</li>
+                <li>Personal Details</li>
+                <li>Contact Details</li>
+                <li>Address</li>
+                <li>Skills</li>
+            </ol>
+            </aside>
 
-                    <div class="form-elements">
-                        <label for="job-reference">Job Description</label>
-                        <input type="text" name="job-description" size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Details of the role">
-                    </div>
-                </div>
-            </section>
-            <section class="form-section">
-                <div class="section-heading">
-                    <span class="section-number">2</span>
-                    <div>
-                        <h2>Personal Details</h2>
-                        <p>Tell us who you are!</p>
-                    </div>
-                </div>
 
-                <div class="form-grid two-column">
-                    <div class="form-elements">
-                        <label for="first-name">First Name <span class="required">*</span></label>
-                        <input type="text" name="first-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="First Name" required size="30">
-                    </div>
-            
-                    <div class="form-elements">
-                        <label for="last-name">Last Name <span class="required">*</span></label>
-                        <input type="text" name="last-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="Last Name" required size="30">
-                    </div>
+            <form action="https://swinburne.instructure.com/courses/71841/assignments/formtest.php." method="post">
+                <section class="form-card">
+                        <div class="section-heading">
+                            <span class="section-number">1</span>
+                            <div>
+                                <h2>Job Details</h2>
+                                <p>What are the details of the job you are applying for?</p>
+                            </div>
+                        </div>
 
-                    <div class="form-elements">
-                        <label for="dob">Date Of Birth <span class="required">*</span></label>
-                        <input type="date" name="dob" id="dob" required>
-                    </div>
+                        <div class="form-grid two-column">
+                            <div class="form-elements">
+                                <label for="job-reference">Job Reference <span class="required">*</span></label>
+                                <input type="text" name="job-reference" maxlength="5" 
+                                size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Job Reference Number" required>
+                            </div>
 
-                    <div class="form-elements">
-                        <label for="gender">Your Gender <span class="required">*</span></label>
-                        <p>
-                            <input type="radio" name="gender" id="male" required>
-                            <label>Male</label>
-
-                            <input type="radio" name="gender" id="Female" required>
-                            <label>Female</label>
-
-                            <input type="radio" name="gender" id="na" required>
-                            <label>Prefer Not Say</label>
-                        </p>
-                    </div>
-
-                    <div class="form-elements">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" name="email" id="email" placeholder="you@example.com" required size="30">
-                    </div>
-
-                    <div class="form-elements">
-                        <label for="phone">Contact Number <span class="required">*</span></label>
-                        <input type="text" id="phone" name="phone" placeholder="0123-456-789" pattern="^[0-9]{10}" maxlength="10">
-                    </div>
-
+                            <div class="form-elements">
+                                <label for="job-reference">Job Description</label>
+                                <input type="text" name="job-description" size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Details of the role">
+                            </div>
+                        </div>
                     
-                </div>
-            </section>
-            <section class="form-section">
-                <div class="section-heading">
-                    <span class="section-number">3</span>
-                    <div>
-                        <h2>Address</h2>
-                        <p>Let us know where you are from</p>
-                    </div>
-                </div>
-            </section>
+                    <section class="form-section">
+                        <div class="section-heading">
+                            <span class="section-number">2</span>
+                            <div>
+                                <h2>Personal Details</h2>
+                                <p>Tell us who you are!</p>
+                            </div>
+                        </div>
 
+                        <div class="form-grid two-column">
+                            <div class="form-elements">
+                                <label for="first-name">First Name <span class="required">*</span></label>
+                                <input type="text" name="first-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="First Name" required size="30">
+                            </div>
+                    
+                            <div class="form-elements">
+                                <label for="last-name">Last Name <span class="required">*</span></label>
+                                <input type="text" name="last-name" maxlength="20" pattern="^[a-zA-Z]+" placeholder="Last Name" required size="30">
+                            </div>
 
+                            <div class="form-elements">
+                                <label for="dob">Date Of Birth <span class="required">*</span></label>
+                                <input type="date" name="dob" id="dob" required>
+                            </div>
 
+                            <div class="form-elements">
+                                <label for="gender">Your Gender <span class="required">*</span></label>
+                                <p>
+                                    <input type="radio" name="gender" id="male" required>
+                                    <label>Male</label>
 
-            <div class="form-actions">
-                <button type="reset" class="btn btn-secondary">Clear Form</button>
-                <button type="submit" class="btn btn-primary">Submit Application</button>
-            </div>
-        </form>
+                                    <input type="radio" name="gender" id="Female" required>
+                                    <label>Female</label>
+
+                                    <input type="radio" name="gender" id="na" required>
+                                    <label>Prefer Not Say</label>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <div class="section-heading">
+                            <span class="section-number">3</span>
+                            <div>
+                                <h2>Contact Details</h2>
+                                <p>So we can get in touch</p>
+                            </div>
+                        </div>
+                        <div class="form-grid two-column">
+                            <div class="form-elements">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" name="email" id="email" placeholder="you@example.com" required size="30">
+                            </div>
+
+                            <div class="form-elements">
+                                <label for="phone">Contact Number <span class="required">*</span></label>
+                                <input type="text" id="phone" name="phone" placeholder="0123-456-789" pattern="^[0-9]{10}" maxlength="10">
+                            </div>
+
+                            
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <div class="section-heading">
+                            <span class="section-number">4</span>
+                            <div>
+                                <h2>Address</h2>
+                                <p>Let us know where you are from</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid two-column">
+                            <div class="form-elements">
+                                <label for="address">Street Address</label>
+                                <input type="text" name="address" id="address" placeholder="Address" maxlength="40" size="60">
+                            </div>
+
+                            <div class="form-elements">
+                                <label for="suburbtown">Suburb/Town</label>
+                                <input type="text" name="suburbtown" id="suburbtown" placeholder="Suburb/Town" maxlength="40" size="60">
+                            </div>
+
+                            <div class="form-elements">
+                                <label for="state">State/Territory</label>
+                                <select name="state" id="state">
+                                    <option value="select">Please select</option>
+                                    <option value="state1">VIC</option>
+                                    <option value="state2">NSW</option>
+                                    <option value="state3">QLD</option>
+                                    <option value="state4">WA</option>
+                                    <option value="state5">SA</option>
+                                    <option value="state6">ACT</option>
+                                    <option value="state7">NT</option>
+                                    <option value="state8">TAS</option>
+                                </select>
+                            </div>
+
+                            <div class="form-elements">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" name="postcode" id="postcode" maxlength="4">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <div class="section-heading">
+                            <span class="section-number">5</span>
+                            <div>
+                                <h2>Skills</h2>
+                                <p>Let us know what you are best at</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid two-column">
+                            <div class="form-elements">
+                                <label for="skills">What Skills Do You Have</label>
+                                <br>
+                                    <label>
+                                        <input type="checkbox" id="communication" name="communication" value="communication">Communication
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="problem-solving" name="problem-solving" value="problem-solving">Problem Solving
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="leadership" name="leadership" value="leadership">Leadership
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="technical" name="technical" value="technical">Technical
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="time-management" name="time-management" value="time-management">Time Management
+                                    </label>
+                            </div>
+
+                            <div class="form-elements">
+                                <label>
+                                        <input type="checkbox" id="teamwork" name="teamwork" value="teamwork">Teamwork
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="adaptability" name="adaptability" value="adaptability">Adaptability
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="data-analysis" name="data-analysis" value="data-analysis">Data Analysis
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="customer-service" name="customer-service" value="customer-service">Customer Service
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" id="project-management" name="project-management" value="project-management">Project Management
+                                    </label>
+                            </div>
+                        </div>
+
+                        <div class="form-elements">
+                                <textarea name="otherskills" id="otherskills" rows="4" cols="400" placeholder="Any other skills?"></textarea>
+                        </div>
+                    </section
+
+                    <section class="form-section">
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </section>
+                </section>
+            </form>
+        </main>
     </body>
 </html>
