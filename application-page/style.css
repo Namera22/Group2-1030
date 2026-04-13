@@ -26,61 +26,88 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    overflow-y: auto;
+    height: 100vh;
 }
 
+section {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
 
 header {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
+    overflow: hidden;
+}
+
+header.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
     overflow: hidden;
 }
 
 .video {
     width: 100%;
-    height: 60%;
+    height: 100%;
     object-fit: cover;
     display: block;
-    /*puts it as the bottom most element so that thing can be put on top of it*/
-    z-index: 1;
-    background-color: rgba(255, 0, 0, 0.3);
-    filter: brightness(60%) hue-rotate(40deg); 
+    filter: brightness(60%) hue-rotate(40deg);
 }
 
 .overlay-text {
     position: absolute;
-    top: 20%;
-    left: 30%;
-    /* moves the element to the centre. (moves back 50% of the top and the left to centre the element)*/
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    /* controls what sits on top of what, thus making it the highest order, (putting it on top of the visual)*/
     z-index: 10;
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,  'Helvetica Neue', sans-serif;
-    font-size: 130px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: clamp(2rem, 8vw, 8rem);
     font-weight: 900;
+    line-height: 1;
+    width: 90%;
 }
 
 /*style of the text underneath the main overlay*/
 .info {
     position: absolute;
-    top: 30%;
-    left: 30%;
-    /* moves the element to the centre. (moves back 50% of the top and the left to centre the element)*/
-    transform: translate(-50%, -50%);
-    color: white;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,  'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-legend {
+    margin: 0;
+    color: white;
     text-align: center;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    /* the clamp allows text size to change without letting text get too small or too large */
+    font-size: clamp(0.9rem, 1.6vw, 1.25rem);
+    font-weight: 800;
+    width: 90%;
 }
 
 .form-section {
+    /* creates a border around the radius of each section at the top*/
+    border-top: 1px solid rgb(0, 0, 0);
+    /* creates a gap between each section*/
+    margin-top: 32px;
+    /* creates space between the heading of each section and the border*/
+    padding-top: 32px;
+}
+
+.section-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+    background: rgb(69, 158, 122);
+    color: #ffffff;
+    font-weight: 700;
+    display:flex;
     justify-content: center;
+    align-items: center;
 }
 
 .form-elements {
@@ -124,4 +151,20 @@ label {
 
 .required {
     color: red;
+}
+
+/* this stops form elements from scrolling within their grid*/
+/* it works by */
+html, body {
+  overflow-y: auto;
+}
+
+.form-grid,
+.form-grid > * {
+  overflow: visible;
+}
+
+#otherskills {
+    width: 500px;
+    height: 400px;
 }
