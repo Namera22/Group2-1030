@@ -89,12 +89,25 @@ header.hero {
     width: 90%;
 }
 
-legend {
-    text-align: center;
+.form-section {
+    /* creates a border around the radius of each section at the top*/
+    border-top: 1px solid rgb(0, 0, 0);
+    /* creates a gap between each section*/
+    margin-top: 32px;
+    /* creates space between the heading of each section and the border*/
+    padding-top: 32px;
 }
 
-.form-section {
+.section-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+    background: rgb(69, 158, 122);
+    color: #ffffff;
+    font-weight: 700;
+    display:flex;
     justify-content: center;
+    align-items: center;
 }
 
 .form-elements {
