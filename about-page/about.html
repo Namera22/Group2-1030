@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="John Fitzpatrick">
     <meta name="keywords" content="Swinburne, metadata, web development">
+    <link  rel="stylesheet" href="about-style.css">
     <title>About us</title><!--meta data-->
 </head>
 <body>
+<h1 style="color:blue;"><strong>About us!</strong></h1>
+
+<section id="nestedlist">
 <h2>Class Information</h2>
 <ul><!--nested list for class time and day-->
   <li>
@@ -17,9 +21,10 @@
       <li>Class time/day: Wednesday 10:30AM - 12:30 PM</li>
     </ul>
     </li>
-</ul>
-<h2>Member and contribution list, with quote</h2>
-<dl><!--defintion list for memeber contributions-->
+</ul></section>
+<section id="description">
+<h2 class="contribution">Member and contribution list, with quote</h2>
+<dl class="contribution"><!--defintion list for memeber contributions-->
     <dt><strong>Member 1</strong></dt>
     <dd>Index.html and respectibe CSS styling ,"Quote from first language/non english language"</dd>
     <dd>English translation of quote</dd>
@@ -31,13 +36,11 @@
     <dt><strong>Member 4</strong></dt>
     <dd>About.html and respective CSS styling, "一番好きなしゅみはうんこをします”</dd>
     <dd>the key to a strong work force is open communication</dd>
-</dl>
-<h2>Our Group photo</h2>
-<!--ADD HREF-->
-<figure><!--GROUP PHOTO--></figure>
-<!--WITH CAPTION TOO-->
-<h3>Here's more about us!</h3>
-<table><!--Fun facts table for caption-->
+</dl></section>
+
+<section id="tables">
+<h2 class="subheader">Here's more about us!</h2>
+<table><!--Fun facts table for imagex-->
   <tr>
     <th>Member</th>
     <th>Dream Job</th>
@@ -47,7 +50,7 @@
   </tr>
   <tr>
     <td>Member 1</td>
-    <td>*dream job</td>
+    <td>*data anaylyst at big company</td>
     <td>*Coding snack</td>
     <td>*hometown</td>
     <td>*Miscellaneous</td>
@@ -74,7 +77,9 @@
     <td>*Miscellaneous</td>
   </tr>
 </table>
-
+</section>
+<figure><figcaption><h2><strong>Meet our team!</strong></h2></figcaption>
+<a class="image" href="images/placeholder.png">  <img id="image" src="images/placeholder.png" alt="Photo of our current standing Group!" title="Group-photo" /></a></figure>
 
 
 

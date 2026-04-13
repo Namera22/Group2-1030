@@ -1,0 +1,55 @@
+/*
+filename: About page style
+
+author: John Fitzpatrick
+
+created: 13/04/2026
+
+last modified: 13/04/2026
+
+description: style sheet for the about page of our Web technology project
+*/
+header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+/* Image figure */
+figure {
+    border: 2px solid black;
+    text-align: center;
+
+}
+#image{
+    width: 75%;
+}
+/* contribution list*/
+.contribution{
+width:90%;
+padding: 0.5em;
+}
+#tables{
+    padding:0.5em;
+}
+
+table{
+    text-align:left;
+}
+th, td {
+    border: 1px solid black;
+    padding: 0.1em;
+}
+h1 {
+    padding: 0.5em;
+    margin:auto;
+}
+#nestedlist{
+    padding:0.5em;
+    margin:auto;
+}
