@@ -72,6 +72,38 @@ header.hero {
     width: 90%;
 }
 
+/* ensuring that the form elements are above the header video*/
+form {
+    z-index: 10;
+}
+
+/* puts the contents of the form in a seperate box, moving it into column*/
+.page-wrap {
+  max-width: 1100px;
+  margin: -28px auto 60px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.progress-card,
+.form-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  z-index: 10;
+}
+
+/* making the contents of the page follow you.*/
+.progress-card {
+    padding: 24px;
+    /* causes the contents to follow you throught the page*/
+    position: sticky;
+    top: 24px;
+}
+
 /*style of the text underneath the main overlay*/
 .info {
     position: absolute;
@@ -110,14 +142,24 @@ header.hero {
     align-items: center;
 }
 
+
 .form-elements {
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-x: auto;
     margin-bottom: 3px;
-    height: 80px;
+    height: 30vh;
     padding: 10%;
+    min-width: 0;
+    min-height: 30vh;
+}
+
+/*attempt at animating the form to pop out more to the user. unsuccessful.*/
+.form-grid {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 /* this puts a bubble sort of border on the input box, I did have to use AI to figure out how this works.*/
@@ -145,7 +187,11 @@ label {
     overflow: visible;
 }
 
+
+/*causes following information within the class to be seperated into 2 columns */
 .two-column {
+    /*seperates the details into 2 even columns, with columns able to shrink to width of 0, and and maximum 1fr means 1 fraction unit
+    which is 50% as there is only 2 columns */
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
