@@ -8,6 +8,67 @@ created: 14/04/2026
 
 last modified: 14/04/2026
 
-description: lab04.html
+description:   Page-specific styles for jobs.html
 */
 
+/* Removes default browser inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.7;
+    background-color: #ffffff;
+    color: #222222;
+}
+ 
+/* Headings */
+h1 {
+    font-size: 2.2em;
+    color: #0a1628;
+    margin-bottom: 0.5em;
+}
+ 
+h2 {
+    font-size: 1.6em;
+    color: #1a3a5c;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+}
+ 
+h3 {
+    font-size: 1.1em;
+    color: #2e5f8a;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+ 
+strong {
+    color: #0a1628;
+}
+ 
+/* Paragraphs & Links */
+p {
+    margin-bottom: 0.8em;
+}
+ 
+a {
+    color: #1a3a5c;
+    text-decoration: none;
+}
+ 
+a:hover {
+    color: #0a1628;
+    text-decoration: underline;
+}
+ 
+a:focus {
+    outline: 2px solid #1a3a5c;
+    outline-offset: 2px;
+}
