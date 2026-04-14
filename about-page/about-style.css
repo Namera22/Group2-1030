@@ -5,19 +5,24 @@ author: John Fitzpatrick
 
 created: 13/04/2026
 
-last modified: 13/04/2026
+last modified: 14/04/2026
 
 description: style sheet for the about page of our Web technology project
 */
-header{
+h1{/* this is a backround for the header/title of the page, "About us!"*/
     font-family: Arial, Helvetica, sans-serif;
-}
-body {
+    border: 1px darkgrey;
+    border-radius: 12px;
+    margin: auto;
+    padding: 0.5em;
+    background-color:rgb(228, 228, 228);
+} 
+body {/*general font formatting and area padding for the rest of the site, although most sections have a reassigned padding*/
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
     line-height: 1.5;
     margin: 0;
-    padding: 0;
+    padding: 1.5em;
     overflow-y: auto;
 }
 /* Image figure */
@@ -26,7 +31,7 @@ figure {
     text-align: center;
 
 }
-#image{
+#image{/*image size as it was messing with formatting */
     width: 75%;
 }
 /* contribution list*/
@@ -34,22 +39,38 @@ figure {
 width:90%;
 padding: 0.5em;
 }
-#tables{
+#tables{/* this was originally intended to float right, but after realising that the info inside it was placeholder and it was hopeless to fit-
+    it uses its own line now */
     padding:0.5em;
 }
 
-table{
+table{/*aligns text to left, for consistency */
     text-align:left;
 }
-th, td {
-    border: 1px solid black;
+th, td { 
+    border: 2px solid black;
     padding: 0.1em;
+} /*styles the tables, adds border to each cell, highlights when hovering over the cell */
+th:hover, td:hover{
+    background-color: lightgrey;
 }
-h1 {
-    padding: 0.5em;
-    margin:auto;
-}
-#nestedlist{
+
+#nestedlist{/*gerenal padding, parent_nestedlist does not budge so im gonna leave it there
+    opacity set to 0 so it does not show when not hovering */
     padding:0.5em;
     margin:auto;
+    opacity: 0;
+}
+#parent_nestedlist{
+    padding: 1.5em;
+    margin:auto;
+}
+
+
+#nestedlist:hover{ /*resets opacity to default amount, allowing class time to be visible once more */
+    opacity:100
+}
+
+h2, h1{ /*colouring for all subheadings */
+   color: rgb(0, 128, 128);
 }
