@@ -60,6 +60,7 @@ th:hover, td:hover{
     padding:0.5em;
     margin:auto;
     opacity: 0;
+    font-size: 3px;
 }
 #parent_nestedlist{
     padding: 1.5em;
@@ -68,9 +69,19 @@ th:hover, td:hover{
 
 
 #nestedlist:hover{ /*resets opacity to default amount, allowing class time to be visible once more */
-    opacity:100
+    opacity:100;
+    font-size: 16px;
 }
 
 h2, h1{ /*colouring for all subheadings */
-   color: rgb(0, 128, 128);
+   color: #0A3D62;
+}
+
+dt:hover{/*makes the font go bigger and change cover when hovering */
+    font-size: 24px;
+    color: #0A3D62
+}
+
+dt{/*makes the hover register smaller so it doesnt look horrible trying to scroll or just move your mouse around */
+    width: 10%;
 }
