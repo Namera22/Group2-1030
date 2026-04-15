@@ -132,11 +132,17 @@ header.hero {
 
 .form-section {
     /* creates a border around the radius of each section at the top*/
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(98, 98, 98);
     /* creates a gap between each section*/
     margin-top: 32px;
     /* creates space between the heading of each section and the border*/
     padding-top: 32px;
+    /* creates a border around the radius of the container at the bottom 
+    separating the bottom of the container from the top of the next container*/
+    border-bottom: 1px solid rgb(98, 98, 98);
+    background: #f3f3f3;
+    /* moves details away from the border of the box*/
+    padding:2em;
 }
 
 .section-number {
@@ -158,6 +164,7 @@ header.hero {
     gap: 8px;
     min-width: 0;
     margin-bottom: 3px;
+    text-align: center;
 }
 
 /* this puts a bubble sort of border on the input box, I did have to use AI to figure out how this works.*/
@@ -173,6 +180,7 @@ textarea {
     background: #ffffff;
     font: inherit;
     color: #102a43;
+    text-align: center;
 }
 
 label {
@@ -194,6 +202,7 @@ label {
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+/*changes the * to red so user notices it is required*/
 .required {
     color: red;
 }
