@@ -21,7 +21,7 @@ html {
 
 /*default values for and elements in the bodt unless specified otherwise*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     background: #ffffff;
     line-height: 1.5;
     margin: 0;
@@ -29,10 +29,13 @@ body {
     height: 100vh;
 }
 
+/*Separates each category of questions into sections for a cleaner design */
 section {
   background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px gray;
+  /* ensuring that the form elements are above the header video*/
+  z-index: 10;
 }
 
 header {
@@ -72,24 +75,30 @@ header.hero {
     width: 90%;
 }
 
-/* ensuring that the form elements are above the header video*/
-form {
-    z-index: 10;
-}
-
-/* puts the contents of the form in a seperate box, moving it into column*/
+/* puts the contents of the main chunk in a seperate column away from the progress card.*/
 .page-wrap {
+  /* stops content from becoming too wide on large displays*/  
   max-width: 1100px;
   margin: -28px auto 60px;
   padding: 0 24px;
-  display: grid;
-  grid-template-columns: 280px 1fr;
+  display: flex;
   gap: 24px;
   align-items: start;
 }
 
-.progress-card,
-.form-card {
+/*Separates the progress card from the main form*/
+.page-wrap > :first-child {
+    /*says, do not grow, do not shrink, stay 280px*/
+    flex: 0 0 280px;
+}
+
+/*Separates the main form from the progress card*/
+.page-wrap > :last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.progress-card {
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -123,11 +132,17 @@ form {
 
 .form-section {
     /* creates a border around the radius of each section at the top*/
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(98, 98, 98);
     /* creates a gap between each section*/
     margin-top: 32px;
     /* creates space between the heading of each section and the border*/
     padding-top: 32px;
+    /* creates a border around the radius of the container at the bottom 
+    separating the bottom of the container from the top of the next container*/
+    border-bottom: 1px solid rgb(98, 98, 98);
+    background: #f3f3f3;
+    /* moves details away from the border of the box*/
+    padding:2em;
 }
 
 .section-number {
@@ -146,20 +161,10 @@ form {
 .form-elements {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow-x: auto;
-    margin-bottom: 3px;
-    height: 30vh;
-    padding: 10%;
+    gap: 8px;
     min-width: 0;
-    min-height: 30vh;
-}
-
-/*attempt at animating the form to pop out more to the user. unsuccessful.*/
-.form-grid {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    margin-bottom: 3px;
+    text-align: center;
 }
 
 /* this puts a bubble sort of border on the input box, I did have to use AI to figure out how this works.*/
@@ -175,12 +180,14 @@ textarea {
     background: #ffffff;
     font: inherit;
     color: #102a43;
+    text-align: center;
 }
 
 label {
     cursor: default;
 }
 
+/*ple*/
 .form-grid {
     display: grid;
     gap: 20px;
@@ -195,6 +202,7 @@ label {
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+/*changes the * to red so user notices it is required*/
 .required {
     color: red;
 }
