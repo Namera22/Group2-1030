@@ -121,7 +121,7 @@
 
                         <div class="form-elements">
                             <label for="phone">Contact Number <span class="required">*</span></label>
-                            <input type="text" id="phone" name="phone" placeholder="0123-456-789" pattern="^[0-9]{10}" maxlength="10">
+                            <input type="text" id="phone" name="phone" placeholder="0123-456-789" pattern="^[0-9]{8-12}" maxlength="12">
                         </div>
 
                             
@@ -179,56 +179,89 @@
                         </div>
                     </div>
 
-                    <div class="form-grid two-column">
+                    <div class="form-grid">
                         <div class="form-elements">
+                            <style>
+                                .skills-grid {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    gap: 1rem 3rem;
+                                    margin-top: 1.5rem;
+                                }
+                                .skills-list {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 0.6rem;
+                                    font-size: 1.1rem;
+                                    font-weight: 600;
+
+                                    border: 2px solid black;
+                                    border-radius: 12px;
+                                    padding: 4px;
+                                    margin: 2%;
+                                    background-color: #fff;
+                                    box-shadow: 5 10 10 gray;
+                                }
+                            </style>
                             <label for="skills">What Skills Do You Have</label>
                             <br>
-                                <label>
-                                    <input type="checkbox" id="communication" name="communication" value="communication">Communication
+                            <div class="skills-grid">
+                                <label class="skills-list">
+                                    <input type="checkbox" id="communication" name="communication" value="communication">
+                                    <span>Communication</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="problem-solving" name="problem-solving" value="problem-solving">Problem Solving
+                                <label class="skills-list">
+                                    <input type="checkbox" id="problem-solving" name="problem-solving" value="problem-solving">
+                                    <span>Problem Solving</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="leadership" name="leadership" value="leadership">Leadership
+                                <label class="skills-list">
+                                    <input type="checkbox" id="leadership" name="leadership" value="leadership">
+                                    <span>Leadership</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="technical" name="technical" value="technical">Technical
+                                <label class="skills-list">
+                                    <input type="checkbox" id="technical" name="technical" value="technical">
+                                    <span>Technical</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="time-management" name="time-management" value="time-management">Time Management
+                                <label class="skills-list">
+                                    <input type="checkbox" id="time-management" name="time-management" value="time-management">
+                                    <span>Time Management</span>
                                 </label>
-                           </div>
-
-                        <div class="form-elements">
-                            <label>
-                                    <input type="checkbox" id="teamwork" name="teamwork" value="teamwork">Teamwork
-                                </label>
-
-                                <label>
-                                    <input type="checkbox" id="adaptability" name="adaptability" value="adaptability">Adaptability
+                           
+                                <label class="skills-list">
+                                    <input type="checkbox" id="teamwork" name="teamwork" value="teamwork">
+                                    <span>Teamwork</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="data-analysis" name="data-analysis" value="data-analysis">Data Analysis
+                                <label class="skills-list">
+                                    <input type="checkbox" id="adaptability" name="adaptability" value="adaptability">
+                                    <span>Adaptability</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="customer-service" name="customer-service" value="customer-service">Customer Service
+                                <label class="skills-list">
+                                    <input type="checkbox" id="data-analysis" name="data-analysis" value="data-analysis">
+                                    <span>Data Analysis</span>
                                 </label>
 
-                                <label>
-                                    <input type="checkbox" id="project-management" name="project-management" value="project-management">Project Management
+                                <label class="skills-list">
+                                    <input type="checkbox" id="customer-service" name="customer-service" value="customer-service">
+                                    <span>Customer Service</span>
                                 </label>
+
+                                <label class="skills-list">
+                                    <input type="checkbox" id="project-management" name="project-management" value="project-management">
+                                    <span>Project Management</span>
+                                </label>
+                            </div>    
                         </div>
                     </div>
 
                     <div class="form-elements">
-                            <textarea name="otherskills" id="otherskills" rows="4" cols="400" placeholder="Any other skills?"></textarea>
+                        <label for="otherskills">Anything we missed?</label>
+                        <textarea name="otherskills" id="otherskills" rows="4" cols="400" placeholder="Any other skills?"></textarea>
                     </div>
                 </section>
 

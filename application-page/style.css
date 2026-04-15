@@ -11,7 +11,7 @@ description: style sheet for the web technology project of which includes a vide
 */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*makes the website smooth when scrolling*/
@@ -21,7 +21,7 @@ html {
 
 /*default values for and elements in the bodt unless specified otherwise*/
 body {
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif';
     background: #ffffff;
     line-height: 1.5;
     margin: 0;
@@ -29,13 +29,45 @@ body {
     height: 100vh;
 }
 
+p {
+    color: #102a43;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 7%;
+}
+
+h2 {
+    color: #0a3d62;
+}
+
+label {
+    color: #1e313e;
+    font-size: larger;
+    font-weight: 500;
+}
+
 /*Separates each category of questions into sections for a cleaner design */
 section {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px gray;
-  /* ensuring that the form elements are above the header video*/
-  z-index: 10;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px gray;
+    /* ensuring that the form elements are above the header video*/
+    z-index: 10;
+}
+
+.form-section {
+    /* creates a border around the radius of each section at the top*/
+    border-top: 1px solid rgb(98, 98, 98);
+    /* creates a gap between each section*/
+    margin-top: 32px;
+    /* creates space between the heading of each section and the border*/
+    padding-top: 32px;
+    /* creates a border around the radius of the container at the bottom 
+    separating the bottom of the container from the top of the next container*/
+    border-bottom: 1px solid rgb(98, 98, 98);
+    background: #f3f3f3;
+    /* moves details away from the border of the box*/
+    padding:2em;
 }
 
 header {
@@ -68,7 +100,7 @@ header.hero {
     margin: 0;
     color: white;
     text-align: center;
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif';
     font-size: clamp(2rem, 8vw, 8rem);
     font-weight: 900;
     line-height: 1;
@@ -77,13 +109,13 @@ header.hero {
 
 /* puts the contents of the main chunk in a seperate column away from the progress card.*/
 .page-wrap {
-  /* stops content from becoming too wide on large displays*/  
-  max-width: 1100px;
-  margin: -28px auto 60px;
-  padding: 0 24px;
-  display: flex;
-  gap: 24px;
-  align-items: start;
+    /* stops content from becoming too wide on large displays*/  
+    max-width: 1100px;
+    margin: -28px auto 60px;
+    padding: 0 24px;
+    display: flex;
+    gap: 24px;
+    align-items: start;
 }
 
 /*Separates the progress card from the main form*/
@@ -99,10 +131,10 @@ header.hero {
 }
 
 .progress-card {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  z-index: 10;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    z-index: 10;
 }
 
 /* making the contents of the page follow you.*/
@@ -130,26 +162,13 @@ header.hero {
     width: 90%;
 }
 
-.form-section {
-    /* creates a border around the radius of each section at the top*/
-    border-top: 1px solid rgb(98, 98, 98);
-    /* creates a gap between each section*/
-    margin-top: 32px;
-    /* creates space between the heading of each section and the border*/
-    padding-top: 32px;
-    /* creates a border around the radius of the container at the bottom 
-    separating the bottom of the container from the top of the next container*/
-    border-bottom: 1px solid rgb(98, 98, 98);
-    background: #f3f3f3;
-    /* moves details away from the border of the box*/
-    padding:2em;
-}
+
 
 .section-number {
     width: 30px;
     height: 30px;
     border-radius: 90px;
-    background: rgb(69, 158, 122);
+    background: #0a3d62;
     color: #ffffff;
     font-weight: 700;
     display:flex;
@@ -202,6 +221,10 @@ label {
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+checkbox {
+    border-radius: 14px; color: #232425;
+}
+
 /*changes the * to red so user notices it is required*/
 .required {
     color: red;
@@ -210,12 +233,12 @@ label {
 /* this stops form elements from scrolling within their grid*/
 /* it works by */
 html, body {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 .form-grid,
 .form-grid > * {
-  overflow: visible;
+    overflow: visible;
 }
 
 #otherskills {
