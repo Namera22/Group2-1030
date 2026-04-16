@@ -162,7 +162,33 @@ header.hero {
     width: 90%;
 }
 
+.radio-option:hover {
+    border-color: #0b3d6d;
+    background-color: #f5f9ff;
+}
 
+.radio-option:has(input[type="radio"]:checked) {
+    background-color: #123d6b;
+    border-color: #123d6b;
+    color: white;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border: 2px solid #d0d0d0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
 
 .section-number {
     width: 30px;
@@ -221,6 +247,21 @@ label {
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+.form-element-1column {
+    .form-elements {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+}
+
+.skills-grid {
+    margin-bottom: 3rem;
+}
+
 checkbox {
     border-radius: 14px; color: #232425;
 }
@@ -242,6 +283,6 @@ html, body {
 }
 
 #otherskills {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 50%;
 }

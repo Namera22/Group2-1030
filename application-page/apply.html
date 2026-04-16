@@ -92,14 +92,20 @@
                         <div class="form-elements">
                             <label for="gender">Your Gender <span class="required">*</span></label>
                             <p>
-                                <input type="radio" name="gender" id="male" required>
-                                <label>Male</label>
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" id="male" required>
+                                    <span>Male</span>
+                                </label>
 
-                                <input type="radio" name="gender" id="Female" required>
-                                <label>Female</label>
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" id="female" required>
+                                    <span>Female</span>
+                                </label>
 
-                                <input type="radio" name="gender" id="na" required>
-                                <label>Prefer Not Say</label>
+                                <label class="radio-option">
+                                    <input type="radio" name="gender" id="na" required>
+                                    <span>Prefer not say</span>
+                                </label>
                             </p>
                         </div>
                     </div>
@@ -165,7 +171,7 @@
 
                         <div class="form-elements">
                             <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" id="postcode" maxlength="4">
+                            <input type="text" name="postcode" id="postcode" maxlength="4" placeholder="Postcode">
                         </div>
                     </div>
                 </section>
@@ -180,7 +186,7 @@
                     </div>
 
                     <div class="form-grid">
-                        <div class="form-elements">
+                        <div class="form-element-1column">
                             <style>
                                 .skills-grid {
                                     display: grid;
@@ -201,6 +207,18 @@
                                     margin: 2%;
                                     background-color: #fff;
                                     box-shadow: 5 10 10 gray;
+                                }
+
+                                .skills-list:hover {
+                                    border-color: #0b3d6d;
+                                    background-color: #f5f9ff;
+                                    
+                                }
+
+                                .skills-list:has(input[type="checkbox"]:checked) {
+                                    background-color: #123d6b;
+                                    border-color: #123d6b;
+                                    color: white;
                                 }
                             </style>
                             <label for="skills">What Skills Do You Have</label>
@@ -255,12 +273,22 @@
                                     <input type="checkbox" id="project-management" name="project-management" value="project-management">
                                     <span>Project Management</span>
                                 </label>
+
+                                <label class="skills-list">
+                                    <input type="checkbox" id="critical-thinking" name="critical-thinking" value="critical-thinking">
+                                    <span>Critical Thinking</span>
+                                </label>
+
+                                <label class="skills-list">
+                                    <input type="checkbox" id="attention-to-detail" name="attention-to-detail" value="attention-to-detail">
+                                    <span>Attention To Detail</span>
+                                </label>
                             </div>    
                         </div>
                     </div>
 
-                    <div class="form-elements">
-                        <label for="otherskills">Anything we missed?</label>
+                    <div class="form-element-1column">
+                        <label for="otherskills" id="anything-missed">Anything we missed?</label>
                         <textarea name="otherskills" id="otherskills" rows="4" cols="400" placeholder="Any other skills?"></textarea>
                     </div>
                 </section>
