@@ -10,6 +10,10 @@ last modified: 25/03/2026
 description: style sheet for the web technology project of which includes a video. this style sheet is for an application sheet.
 */
 
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     box-sizing: border-box;
 }
@@ -29,6 +33,17 @@ body {
     height: 100vh;
 }
 
+/*changes the * to red so user notices it is required*/
+.required {
+    color: red;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
 p {
     color: #102a43;
     font-size: larger;
@@ -46,29 +61,9 @@ label {
     font-weight: 500;
 }
 
-/*Separates each category of questions into sections for a cleaner design */
-section {
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px gray;
-    /* ensuring that the form elements are above the header video*/
-    z-index: 10;
-}
-
-.form-section {
-    /* creates a border around the radius of each section at the top*/
-    border-top: 1px solid rgb(98, 98, 98);
-    /* creates a gap between each section*/
-    margin-top: 32px;
-    /* creates space between the heading of each section and the border*/
-    padding-top: 32px;
-    /* creates a border around the radius of the container at the bottom 
-    separating the bottom of the container from the top of the next container*/
-    border-bottom: 1px solid rgb(98, 98, 98);
-    background: #f3f3f3;
-    /* moves details away from the border of the box*/
-    padding:2em;
-}
+/* =========================
+   HEADER / HERO
+========================= */
 
 header {
     width: 100%;
@@ -88,7 +83,7 @@ header.hero {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(60%) hue-rotate(40deg);
+    filter: brightness(20%) hue-rotate(40deg);
 }
 
 .overlay-text {
@@ -105,7 +100,29 @@ header.hero {
     font-weight: 900;
     line-height: 1;
     width: 90%;
+    text-shadow: 2px 2px 2px black;
 }
+
+/*style of the text underneath the main overlay*/
+.info {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    /* the clamp allows text size to change without letting text get too small or too large */
+    font-size: clamp(0.9rem, 1.6vw, 1.25rem);
+    font-weight: 800;
+    width: 90%;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
 
 /* puts the contents of the main chunk in a seperate column away from the progress card.*/
 .page-wrap {
@@ -130,6 +147,10 @@ header.hero {
     min-width: 0;
 }
 
+/* =========================
+   SECTIONS and CARDS
+========================= */
+
 .progress-card {
     background: #ffffff;
     border-radius: 18px;
@@ -145,49 +166,28 @@ header.hero {
     top: 24px;
 }
 
-/*style of the text underneath the main overlay*/
-.info {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translateX(-50%);
+/*Separates each category of questions into sections for a cleaner design */
+section {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px gray;
+    /* ensuring that the form elements are above the header video*/
     z-index: 10;
-    margin: 0;
-    color: white;
-    text-align: center;
-    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    /* the clamp allows text size to change without letting text get too small or too large */
-    font-size: clamp(0.9rem, 1.6vw, 1.25rem);
-    font-weight: 800;
-    width: 90%;
 }
 
-.radio-option:hover {
-    border-color: #0b3d6d;
-    background-color: #f5f9ff;
-}
-
-.radio-option:has(input[type="radio"]:checked) {
-    background-color: #123d6b;
-    border-color: #123d6b;
-    color: white;
-}
-
-.radio-option {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
-    border: 2px solid #d0d0d0;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.radio-option input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    margin: 0;
+.form-section {
+    /* creates a border around the radius of each section at the top*/
+    border-top: 1px solid rgb(255, 255, 255);
+    /* creates a gap between each section*/
+    margin-top: 32px;
+    /* creates space between the heading of each section and the border*/
+    padding-top: 32px;
+    /* creates a border around the radius of the container at the bottom 
+    separating the bottom of the container from the top of the next container*/
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: #f3f3f3;
+    /* moves details away from the border of the box*/
+    padding:2em;
 }
 
 .section-number {
@@ -202,6 +202,23 @@ header.hero {
     align-items: center;
 }
 
+/* =========================
+   FORM LAYOUT
+========================= */
+
+/*ple*/
+.form-grid {
+    display: grid;
+    gap: 20px;
+    overflow: visible;
+}
+
+/*causes following information within the class to be seperated into 2 columns */
+.two-column {
+    /*seperates the details into 2 even columns, with columns able to shrink to width of 0, and and maximum 1fr means 1 fraction unit
+    which is 50% as there is only 2 columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
 
 .form-elements {
     display: flex;
@@ -211,6 +228,21 @@ header.hero {
     margin-bottom: 3px;
     text-align: center;
 }
+
+.form-element-1column {
+    .form-elements {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+}
+
+/* =========================
+   FORM INPUTS
+========================= */
 
 /* this puts a bubble sort of border on the input box, I did have to use AI to figure out how this works.*/
 input,
@@ -232,31 +264,41 @@ label {
     cursor: default;
 }
 
-/*ple*/
-.form-grid {
-    display: grid;
-    gap: 20px;
-    overflow: visible;
-}
+/* =========================
+   RADIO BUTTONS
+========================= */
 
-
-/*causes following information within the class to be seperated into 2 columns */
-.two-column {
-    /*seperates the details into 2 even columns, with columns able to shrink to width of 0, and and maximum 1fr means 1 fraction unit
-    which is 50% as there is only 2 columns */
-    grid-template-columns: repeat(2, minmax(0, 1fr))
-}
-
-.form-element-1column {
-    .form-elements {
+.radio-option {
     display: flex;
-    justify-content: center;
-    gap: 8px;
-    min-width: 0;
-    margin-bottom: 2rem;
-    text-align: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border: 2px solid #d0d0d0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
 }
+
+.radio-option:hover {
+    border-color: #0b3d6d;
+    background-color: #f5f9ff;
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+    background-color: #123d6b;
+    border-color: #123d6b;
+    color: white;
+}
+
+/* =========================
+   CHECKBOX FORMAT
+========================= */
 
 .skills-grid {
     margin-bottom: 3rem;
@@ -266,10 +308,15 @@ checkbox {
     border-radius: 14px; color: #232425;
 }
 
-/*changes the * to red so user notices it is required*/
-.required {
-    color: red;
+
+#otherskills {
+    width: 100%;
+    height: 50%;
 }
+
+/* =========================
+   OVERFLOW / TEXTAREA
+========================= */
 
 /* this stops form elements from scrolling within their grid*/
 /* it works by */
@@ -280,9 +327,4 @@ html, body {
 .form-grid,
 .form-grid > * {
     overflow: visible;
-}
-
-#otherskills {
-    width: 100%;
-    height: 50%;
 }
