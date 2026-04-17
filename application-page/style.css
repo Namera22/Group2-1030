@@ -83,7 +83,7 @@ header.hero {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(20%) hue-rotate(40deg);
+    filter: brightness(40%) hue-rotate(40deg);
 }
 
 .overlay-text {
