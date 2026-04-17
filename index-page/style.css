@@ -18,3 +18,14 @@ It also contains styles for other pages eg: footer, nav bar styling which i wwil
 body {
   font-family: Arial;
 }
+
+/* nav bar style */
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #0a3d62;
+  padding: 10px;
+
+}
