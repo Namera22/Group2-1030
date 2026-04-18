@@ -28,19 +28,19 @@
             <aside class="progress-card">
             <h2>Application Sections</h2>
             <ol>
-                <li>Job Details</li>
-                <li>Personal Details</li>
-                <li>Contact Details</li>
-                <li>Address</li>
-                <li>Skills</li>
-                <li>Submit</li>
+                <li><a href="#job-details">Job Details</a></li>
+                <li><a href="#personal-details">Personal Details</a></li>
+                <li><a href="#contact-details">Contact Details</a></li>
+                <li><a href="#address">Address</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#submit">Submit</a></li>
             </ol>
             </aside>
 
             <!--form method post to the link provided -->
             <form action="https://swinburne.instructure.com/courses/71841/assignments/formtest.php." method="post">
                 <!-- using sections to divide the form by their type of questions-->
-                <section class="form-section">
+                <section class="form-section" id="job-details">
                     <!-- used div to divide each 'division' in the format, it also was used to make it easy for class tags-->
                     <div class="section-heading">
                         <!-- used to make styling easer, of which is yet to be completed.-->
@@ -58,12 +58,13 @@
                         </div>
 
                         <div class="form-elements">
-                            <label for="job-description">Job Description</label>
+                            <label for="job-description" class="unrequired">Job Description</label>
                             <input type="text" name="job-description" size="20" required="required" pattern="^[a-zA-Z0-9]+" placeholder="Details of the role" id="job-description">
                         </div>
                     </div>
                 </section>
-                <section class="form-section">
+
+                <section class="form-section" id="personal-details">
                     <div class="section-heading">
                         <span class="section-number">2</span>
                         <div>
@@ -110,7 +111,7 @@
                     </div>
                 </section>
 
-                <section class="form-section">
+                <section class="form-section" id="contact-details">
                     <div class="section-heading">
                         <span class="section-number">3</span>
                         <div>
@@ -133,7 +134,7 @@
                     </div>
                 </section>
 
-                <section class="form-section">
+                <section class="form-section" id="address">
                     <div class="section-heading">
                         <span class="section-number">4</span>
                         <div>
@@ -175,7 +176,7 @@
                     </div>
                 </section>
 
-                <section class="form-section">
+                <section class="form-section" id="skills">
                     <div class="section-heading">
                         <span class="section-number">5</span>
                         <div>
@@ -292,7 +293,14 @@
                     </div>
                 </section>
 
-                <section class="form-section">
+                <section class="form-section" id="submit">
+                    <div class="section-heading">
+                        <span class="section-number">5</span>
+                        <div>
+                            <h2>Submit</h2>
+                            <p>Make sure you have answered all of the required <span class="required">*</span></p>
+                        </div>
+                    </div>
                     <div class="form-actions">
                         <button type="reset" class="btn btn-secondary" style="border-radius: 30px; background-color: rgb(236, 99, 99);">Clear Form</button>
                         <button type="submit" class="btn btn-primary" style="border-radius: 30px; background-color: rgb(188, 247, 100);">Submit Application</button>

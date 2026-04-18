@@ -168,6 +168,15 @@ header.hero {
     top: 24px;
 }
 
+.progress-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.progress-card a:hover {
+    color: #0b3d6d;
+}
+
 /*Separates each category of questions into sections for a cleaner design */
 section {
     background: #ffffff;
@@ -229,6 +238,13 @@ section {
     min-width: 0;
     margin-bottom: 3px;
     text-align: center;
+}
+
+.form-elements label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
 }
 
 .form-element-1column {
