@@ -14,9 +14,9 @@ It also contains styles for other pages eg: footer, nav bar styling which i wwil
 */
 
 /* style for general body */
-
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 /* nav bar style */
@@ -28,4 +28,79 @@ body {
   background: #0a3d62;
   padding: 10px;
 
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav a:hover {
+  background: #2e6f85;
+}
+
+.nav a:focus {
+  outline: 2px solid yellow;
+}
+
+/* styling the hero class*/
+.hero {
+  background-image: url("smartcity.jpg");
+  background-size: cover;
+  height: 300px;
+}
+
+.overlay {
+  background: rgba(15, 11, 11, 0.3);
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  height: 70%;
+}
+
+/* styling of the button */
+.btn {
+  background: gold;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+/* styling the table */
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width:60%
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* styling the search bar*/
+form {
+  text-align: center;
+}
+
+/* styling the acknowledgement section */
+.acknowledgement {
+  background: #e8f4f8;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* styling the footer */
+footer {
+  background: #0e3e60;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
 }
