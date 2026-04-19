@@ -46,7 +46,7 @@ body {
 
 /* styling the hero class*/
 .hero {
-  background-image: url("smartcity.jpg");
+  background-image: url("./images/smartcity.jpg");
   background-size: cover;
   height: 300px;
 }
