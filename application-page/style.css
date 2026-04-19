@@ -83,7 +83,7 @@ header.hero {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(20%) hue-rotate(40deg);
+    filter: brightness(40%) hue-rotate(40deg);
 }
 
 .overlay-text {
@@ -101,6 +101,7 @@ header.hero {
     line-height: 1;
     width: 90%;
     text-shadow: 2px 2px 2px black;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /*style of the text underneath the main overlay*/
@@ -118,6 +119,7 @@ header.hero {
     font-size: clamp(0.9rem, 1.6vw, 1.25rem);
     font-weight: 800;
     width: 90%;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /* =========================
@@ -164,6 +166,15 @@ header.hero {
     /* causes the contents to follow you throught the page*/
     position: sticky;
     top: 24px;
+}
+
+.progress-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.progress-card a:hover {
+    color: #0b3d6d;
 }
 
 /*Separates each category of questions into sections for a cleaner design */
@@ -227,6 +238,13 @@ section {
     min-width: 0;
     margin-bottom: 3px;
     text-align: center;
+}
+
+.form-elements label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
 }
 
 .form-element-1column {
@@ -302,6 +320,7 @@ label {
 
 .skills-grid {
     margin-bottom: 3rem;
+    
 }
 
 checkbox {
