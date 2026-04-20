@@ -15,6 +15,7 @@ h1{/* this is a backround for the header/title of the page, "About us!"*/
     padding: 0.2em;
 } 
 
+
 /* Image figure */
 figure {
     border: 2px solid black;
@@ -87,3 +88,41 @@ section { /* gives all sections a border with shadow to appear to pop out from t
     border-radius: 18px;
     box-shadow: 0 10px 30px gray;
 }
+
+/* nav bar style */
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #0a3d62;
+  padding: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav a:hover {
+  background: #2e6f85;
+}
+
+.nav a:focus {
+  outline: 2px solid yellow;
+}
+
+/* styling the footer */
+footer {
+  background: #0e3e60;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
