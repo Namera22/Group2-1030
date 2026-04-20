@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +19,38 @@
   </style>
 </head>
 <body>
+  
 
 <!-- Header -->
 <header>
-  <h1 >SmartCity Infastructure Consultancy</h1>
+
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="images/logo.png" alt="SmartCity Infrastructure Consultancy logo">
+      <div class="logo-text">
+        <strong>SmartCity</strong>
+        <span>Infrastructure Consultancy</span>
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <ul class="navigation-bar">
+      <li><a href="../index-page/index.html" class="active">Home</a></li>
+      <li><a href="../jobs-page/jobs.html">Jobs</a></li>
+      <li><a href="../application-page/apply.html">Apply</a></li>
+      <li><a href="../about-page/about.html">About</a></li>
+    </ul>
+
+  </div>
+
+</nav>
+
 </header>
 
-<!-- Nav bar -->
-<nav>
-  <ul class="nav">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="../jobs-page/jobs.html">Jobs</a></li>
-    <li><a href="../application-page/apply.html">Apply</a></li>
-    <li><a href="../about-page/about.html">About</a></li>
-  </ul>
-</nav>
 
 <!-- main-->
 <main>
@@ -38,7 +58,7 @@
   <!--hero section-->
   <section class="hero">
     <div class="overlay">
-      <h2 style="color: #f3f5f7; font-size: 32px;">Building Intelligent Urban Futures</h2> <!-- Inline CSS -->
+      <h1 style="color: #f3f5f7; font-size: 32px;">Building Intelligent Urban Futures</h1> <!-- Inline CSS -->
       <p>Smart transport and digital solutions.</p>
       <a href="../jobs-page/jobs.html" class="btn">Explore Careers</a>
     </div>
@@ -72,10 +92,11 @@
 
   <!--search bar-->
   <div class="search-bar">
-    <form>
-      <input type="text" placeholder="Search...">
-      <button type="submit">Search</button>
-    </form>
+<form>
+  <label for="search">Search</label>
+  <input type="text" id="search" placeholder="Search...">
+  <button type="submit">Search</button>
+</form>
   </div>
 
 
@@ -89,6 +110,7 @@
     We recognise the importance of diverse perspectives in building smarter,more equitable urban environments.
   </p>
 </section>
+
 </main>
 
 <!--footer of the page-->
