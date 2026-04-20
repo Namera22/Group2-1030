@@ -10,6 +10,19 @@ last modified: 25/03/2026
 description: style sheet for the web technology project of which includes a video. this style sheet is for an application sheet.
 */
 
+/* Credit: Generative AI (specifically ChatGPT) was used as a support tool during the development of this style sheet, but not to directly generate final answers or complete solutions.
+
+ChatGPT was primarily used to ask questions, clarify concepts, and explore possible approaches while learning how to structure and implement the CSS. It assisted in organising the layout of the style sheet, including suggesting clearer section titles and overall formatting.
+
+When issues arose, such as form elements scrolling within a grid container, ChatGPT was used to explore potential fixes. It suggested approaches such as using overflow-y: auto, which was then tested, understood, and implemented independently.
+
+YouTube was also used as a learning resource for implementing the video background. Credit to Bro Code:
+https://www.youtube.com/watch?v=Ki_0iES2cGI
+
+ChatGPT additionally provided guidance on styling techniques for the video element (such as object-fit), while the overlay text and layering (z-index) were designed and implemented independently.
+*/
+
+
 /* =========================
    GLOBAL
 ========================= */

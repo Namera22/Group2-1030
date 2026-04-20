@@ -84,6 +84,44 @@ header {
   margin-bottom: 1.5em;
 }
 
+/*direction and size of the navigation bar*/
+.navigation-bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 12px 0;
+    background: #0a3d62;
+}
+
+/*puts all list items in an inline order seperated by blocks*/
+.navigation-bar li {
+    display: inline-block;
+}
+
+/*decides the colour for the anchor tags (hyperlinks)*/
+.navigation-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+/*anchor tag behaviour when user is hovering over it*/
+.navigation-bar a:hover {
+    background: #2e6f85;
+}
+
+/*very useful for accessibility as it allows keyboard users to see what is selected, highlighting the element yellow.*/
+.navigation-bar a:focus {
+    outline: 2px solid yellow;
+    outline-offset: 2px;
+}
+
 main {
   width: 100%;
 }
@@ -233,4 +271,17 @@ section ol {
   color: #ffffff;
   text-decoration: none;
   border-radius: 10px;
+}
+
+/* styling the footer */
+footer {
+  background: #0e3e60;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
 }
