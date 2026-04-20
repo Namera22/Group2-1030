@@ -2,9 +2,10 @@
     filename:      jobs.css
     author:        Namera Nayat
     created:       14/04/2026
-    last modified: 15/04/2026
-    description:   Page-specific styles for jobs.html
-*/
+    last modified: 20/04/2026
+    description:   Page-specific styles for jobs.html */
+
+/* AI Acknowledgement: Generative AI (specifically ChatGPT) was used as a support tool during the development of this style sheet, but not to directly generate final answers or complete solutions. It was mostly used to understand and solve minor issues that arose during development, such as formatting and layout problems. The overall design, structure, and content of the style sheet were created independently. */
 
 /* Removes default browser inconsistencies */
 * {
